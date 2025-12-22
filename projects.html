@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Your Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">{</span> YourName <span class="logo-text">}</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="projects.html" class="active"><i class="fas fa-code"></i> Projects</a>
+                <a href="skills.html"><i class="fas fa-cogs"></i> Skills</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">My <span class="gradient-text">Projects</span></h1>
+            <p class="page-subtitle">A collection of my work, from simple websites to complex applications</p>
+        </div>
+    </section>
+
+    <!-- Projects Filter -->
+    <section class="projects-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="design">UI/UX Design</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-page">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- PrintEase Project -->
+                <div class="project-card detailed" data-category="web">
+                    <div class="project-badge">Featured</div>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=PrintEase+Xerox+App" alt="PrintEase">
+                    </div>
+                    <div class="project-content">
+                        <h3>PrintEase - Campus Xerox Solution</h3>
+                        <p class="project-date"><i class="far fa-calendar"></i> December 2024</p>
+                        <p class="project-description">
+                            A full-stack web application that revolutionizes campus printing. Students can upload documents,
+                            select print settings, make online payments, and track orders in real-time.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>File upload with preview</li>
+                                <li>Real-time order tracking</li>
+                                <li>QR code pickup system</li>
+                                <li>Payment integration</li>
+                                <li>Shop owner dashboard</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Razorpay API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kalaivaniparthi/PrintEase" target="_blank" class="btn-code">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://kalaivaniparthi.github.io/PrintEase/" target="_blank" class="btn-demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn-case-study" onclick="showCaseStudy('printease')">
+                                <i class="fas fa-book-open"></i> Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more projects similarly -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats -->
+    <section class="github-stats">
+        <div class="container">
+            <h2><i class="fab fa-github"></i> GitHub Activity</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h3 id="repo-count">12</h3>
+                    <p>Public Repositories</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <h3 id="star-count">45</h3>
+                    <p>Stars Earned</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-code"></i>
+                    <h3 id="commit-count">256</h3>
+                    <p>Total Commits</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3 id="follower-count">28</h3>
+                    <p>GitHub Followers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>{ YourName }</h3>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Name. All rights reserved. | Made with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></p>
+                <p id="visitor-counter">Visitors: <span>0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Projects page specific JavaScript
+        function showCaseStudy(projectId) {
+            alert(`Case study for ${projectId} coming soon!`);
+            // In real implementation, this would open a modal with detailed case study
+        }
+        
+        // Simulate GitHub stats (in real app, fetch from GitHub API)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate counting
+            function animateCounter(elementId, target) {
+                let current = 0;
+                const element = document.getElementById(elementId);
+                const increment = target / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }, 20);
+            }
+            
+            animateCounter('repo-count', 12);
+            animateCounter('star-count', 45);
+            animateCounter('commit-count', 256);
+            animateCounter('follower-count', 28);
+        });
+    </script>
+</body>
+</html>
