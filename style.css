@@ -19,6 +19,10 @@
 
 body {
     background-color: var(--dark-bg);
+    /* subtle minimal tech grid pattern using SVG data URL */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23999999' stroke-opacity='0.1' stroke-width='0.5'%3E%3Cpath d='M0 0h40M0 20h40M20 0v40'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 40px 40px;
+    background-attachment: fixed;
     color: var(--text-light);
     line-height: 1.6;
 }
@@ -283,4 +287,28 @@ footer {
     nav { flex-direction: column; gap: 1rem; }
     section { padding: 3rem 5%; }
     .nav-links { gap: 1rem; font-size: 0.9rem; }
+}
+/* Success Message Style */
+.success-message {
+    text-align: center;
+    padding: 3rem;
+    background: var(--light-bg);
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+}
+
+.success-message i {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.success-message h3 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.success-message p {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
 }

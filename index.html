@@ -28,7 +28,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm <span>KALAIVANI PARTHIPAN</span></h1>
-            <p>Pursuing B.Tech IT at <strong>Agni College of Technology, Chennai</strong>. Passionate Full Stack and Cloud Developer building scalable web applications.</p>
+            <p><strong> Passionate Full Stack and Cloud Developer building scalable web applications.</strong> </p>
             <a href="#projects" class="btn">View My Work</a>
         </div>
     </section>
@@ -40,9 +40,8 @@
             <div class="about-text">
                 <h3>Aspiring Software Engineer</h3>
                 <p>
-                    I am currently a student at Agni College of Technology, Chennai, specializing in Information Technology. 
-                    I have a strong foundation in web development and cloud computing. I love solving complex problems 
-                    and have solved over <strong>20+ problems</strong> on LeetCode.
+                    I am currently a student at Agni College of Technology, Chennai, specializing in Information Technology. I have a strong foundation in web development and cloud computing,
+                     and I love solving complex problems and being solving problems from leetcode everyday. I am actively seeking an internship in Full Stack Web Development and currently preparing projects while sharpening my problem-solving skills.
                 </p>
                 
                 <!-- LeetCode Highlight -->
@@ -93,27 +92,36 @@
     </section>
 
     <!-- Contact Section (With Database Connection) -->
+        <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title"><span>Contact Me</span></h2>
         <div class="contact-container">
-            <form class="contact-form" action="connect.php" method="POST">
+            <form id="contactForm" class="contact-form">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="text" id="name" placeholder="Your Name" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
                 </div>
                 
                 <button type="submit" class="btn">Send Message</button>
             </form>
+            
+            <!-- Success Message (Hidden by default) -->
+            <div id="successMessage" class="success-message" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <h3>Message Sent Successfully!</h3>
+                <p>Thank you for contacting me. I'll get back to you soon.</p>
+                <button class="btn" onclick="resetForm()">Send Another Message</button>
+            </div>
         </div>
     </section>
 
@@ -129,5 +137,9 @@
         <p>&copy; 2024 [KALAIVANI PARTHIPAN]. All rights reserved.</p>
     </footer>
 
+    
+<form id="contactForm" class="contact-form">
+    <!-- form fields -->
+</form>
 </body>
 </html>
