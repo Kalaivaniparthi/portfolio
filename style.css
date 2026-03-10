@@ -1,4 +1,3 @@
-/* ===== RESET & BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -686,4 +685,4 @@ footer {
     .cta-card {
         padding: 2rem;
     }
-}
+
