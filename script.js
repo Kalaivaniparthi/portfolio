@@ -310,13 +310,13 @@ EDUCATION
 ---------
 B.Tech Information Technology
 Agni College of Technology, Chennai
-Expected Graduation: 2027
+
 
 SKILLS
 ------
-- Frontend: HTML, CSS, JavaScript
+- Frontend: HTML, CSS, JavaScript,React
 - Backend: Node.js, Python
-- Database: MongoDB, MySQL
+- Database:  MySQL
 - Tools: Git, VS Code
 
 PROJECTS
@@ -325,12 +325,12 @@ PROJECTS
    Campus printing solution reducing waiting time by 70%
 
 2. GoodDeed - Charity Website
-   Platform connecting donors with NGOs
+   Platform which makes individuals to do social work
 
 ACHIEVEMENTS
 ------------
-- Solved 10+ LeetCode problems
-- Active in tech communities
+- Solved 100+ LeetCode problems
+- won 3 place in agniventura(pitch the idea contest) by the project GoodDeed
     `;
     
     const blob = new Blob([resumeContent], { type: 'text/plain' });
