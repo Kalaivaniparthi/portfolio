@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALAIVANI P | Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">{</span> KALAIVANI P<span class="logo-text">}</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="projects.html" class="active"><i class="fas fa-code"></i> Projects</a>
+                <a href="skills.html"><i class="fas fa-cogs"></i> Skills</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-code"></i> My Projects</h1>
+            <p>Here are some of my recent works and personal projects</p>
+        </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="project-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-full">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Project 1 - PrintEase -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="project-tag">Full Stack</div>
+                        <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=PrintEase+App" alt="PrintEase App">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Kalaivaniparthi/PrintEase" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://kalaivaniparthi.github.io/PrintEase/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>PrintEase - Xerox Shop App</h3>
+                        <p>A campus printing solution that reduces waiting time by 70% with online ordering and payment. Includes secure authentication and print queue management.</p>
+                        <div class="project-tech">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kalaivaniparthi/PrintEase" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://kalaivaniparthi.github.io/PrintEase/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - GoodDeed Charity -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-tag">Web Development</div>
+                        <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=GoodDeed+Charity" alt="GoodDeed Charity">
+                        <div class="project-overlay">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>GoodDeed - Charity Platform</h3>
+                        <p>A platform connecting donors with verified NGOs. Users can donate funds, track their contributions, and view impact stories.</p>
+                        <div class="project-tech">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - AI Study Assistant (Upcoming) -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <div class="project-tag">AI/ML</div>
+                        <img src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=AI+Study+Assistant" alt="AI Study Assistant">
+                        <div class="project-overlay">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Study Assistant <span class="upcoming-badge">Upcoming</span></h3>
+                        <p>AI-powered tool that summarizes PDFs, generates quizzes, and tracks learning progress for students.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenAI API</span>
+                            <span>Flask</span>
+                            <span>React</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Coming Soon</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 - Portfolio Website -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-tag">Frontend</div>
+                        <img src="https://via.placeholder.com/400x250/ef4444/ffffff?text=Portfolio+Website" alt="Portfolio Website">
+                        <div class="project-overlay">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Portfolio</h3>
+                        <p>A modern, responsive portfolio website showcasing my skills, projects, and experience with dark/light theme support.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - Weather App -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-tag">API Integration</div>
+                        <img src="https://via.placeholder.com/400x250/3b82f6/ffffff?text=Weather+App" alt="Weather App">
+                        <div class="project-overlay">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Forecast App</h3>
+                        <p>Real-time weather application showing temperature, humidity, and 5-day forecast using OpenWeatherMap API.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>REST API</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - Task Manager -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="project-tag">Full Stack</div>
+                        <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Task+Manager" alt="Task Manager">
+                        <div class="project-overlay">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>TaskFlow - Task Manager</h3>
+                        <p>A productivity app with task creation, deadlines, categories, and progress tracking features.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats -->
+    <section class="github-stats">
+        <div class="container">
+            <div class="stats-card">
+                <i class="fab fa-github"></i>
+                <h3>Check out my GitHub for more!</h3>
+                <p>I regularly contribute to open source and work on personal projects.</p>
+                <a href="https://github.com/Kalaivaniparthi" target="_blank" class="btn-primary">
+                    <i class="fab fa-github"></i> Visit My GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>{ KALAIVANI P }</h3>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KALAIVANI P. All rights reserved. | Made with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></p>
+                <p id="visitor-counter">Visitors: <span>0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
