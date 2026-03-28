@@ -238,3 +238,24 @@ function downloadResume() {
 }
 
 console.log('✅ All scripts are ready! Dark mode is default.');
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA886GlxzCTexy7bvvLNrRg617owvOyIe4",
+  authDomain: "portfolio-51a49.firebaseapp.com",
+  projectId: "portfolio-51a49",
+  storageBucket: "portfolio-51a49.firebasestorage.app",
+  messagingSenderId: "466986441034",
+  appId: "1:466986441034:web:cac5619b79421f9edfc9b3",
+  measurementId: "G-1QJQCJF97B"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);

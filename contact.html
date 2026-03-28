@@ -52,7 +52,7 @@
                             </div>
                             <div class="info-text">
                                 <h3>Email</h3>
-                                <a href="mailto:kalaivani@example.com">kalaivani.p@example.com</a>
+                                <a href="mailto:kalaivani.p@example.com">kalaivani.p@example.com</a>
                             </div>
                         </div>
                         
@@ -109,48 +109,12 @@
                             <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn-primary submit-btn">
+                        <button type="submit" class="btn-primary submit-btn" id="submitBtn">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                         
                         <div id="formStatus" class="form-status"></div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="container">
-            <div class="map-placeholder">
-                <i class="fas fa-map-marked-alt"></i>
-                <h3>📍 Based in Chennai, India</h3>
-                <p>Available for remote opportunities worldwide</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>📧 How quickly do you respond?</h3>
-                    <p>I typically respond within 24-48 hours. Feel free to follow up if you don't hear back!</p>
-                </div>
-                <div class="faq-item">
-                    <h3>💼 Are you available for internships?</h3>
-                    <p>Yes! I'm actively seeking internship opportunities in Full Stack Development.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>💰 Do you do freelance work?</h3>
-                    <p>Absolutely! I'm open to freelance projects that align with my skills and schedule.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>🤝 What's your preferred way to collaborate?</h3>
-                    <p>I work best with clear communication via email or video calls. I'm flexible with tools!</p>
                 </div>
             </div>
         </div>
@@ -193,6 +157,83 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="script.js"></script>
+    <!-- Firebase Script - CORRECT VERSION -->
+    <script type="module">
+        // IMPORTANT: Use full URLs, not "firebase/app"
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        
+        // REPLACE WITH YOUR FIREBASE CONFIG
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA886GlxzCTexy7bvvLNrRg617owvOyIe4",
+  authDomain: "portfolio-51a49.firebaseapp.com",
+  databaseURL: "https://portfolio-51a49-default-rtdb.firebaseio.com",
+  projectId: "portfolio-51a49",
+  storageBucket: "portfolio-51a49.firebasestorage.app",
+  messagingSenderId: "466986441034",
+  appId: "1:466986441034:web:cac5619b79421f9edfc9b3",
+  measurementId: "G-1QJQCJF97B"
+};
+        
+        // Initialize
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        
+        console.log("✅ Firebase connected!");
+        
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('submitBtn');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const subject = document.getElementById('subject').value.trim();
+                const message = document.getElementById('message').value.trim();
+                
+                if (!name || !email || !message) {
+                    formStatus.innerHTML = '❌ Please fill all required fields.';
+                    formStatus.style.color = '#ef4444';
+                    setTimeout(() => formStatus.innerHTML = '', 3000);
+                    return;
+                }
+                
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                formStatus.innerHTML = 'Sending...';
+                formStatus.style.color = '#667eea';
+                
+                try {
+                    const docRef = await addDoc(collection(db, "contacts"), {
+                        name: name,
+                        email: email,
+                        subject: subject || 'No subject',
+                        message: message,
+                        timestamp: serverTimestamp(),
+                        date: new Date().toLocaleString()
+                    });
+                    
+                    console.log("✅ Saved! ID:", docRef.id);
+                    formStatus.innerHTML = '✅ Message sent successfully!';
+                    formStatus.style.color = '#10b981';
+                    contactForm.reset();
+                    setTimeout(() => formStatus.innerHTML = '', 5000);
+                    
+                } catch (error) {
+                    console.error("❌ Error:", error);
+                    formStatus.innerHTML = '❌ Error: ' + error.message;
+                    formStatus.style.color = '#ef4444';
+                    setTimeout(() => formStatus.innerHTML = '', 5000);
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
